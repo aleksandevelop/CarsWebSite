@@ -399,7 +399,7 @@ button[aria-label]::before {
   padding: 50px;
   gap: 25px;
   align-items: end;
-  background: url("/images/header/box.png") 100%/cover no-repeat;
+  background: url("../images/header/box.png") 100%/cover no-repeat;
 }
 .header__body-logo {
   align-self: center;
@@ -440,34 +440,34 @@ button[aria-label]::before {
   height: 40px;
 }
 .counter .count-zero {
-  background: url("/images/header/count.png") 0px 0px;
+  background: url("../images/header/count.png") 0px 0px;
 }
 .counter .count-one {
-  background: url("/images/header/count.png") -24px 0px;
+  background: url("../images/header/count.png") -24px 0px;
 }
 .counter .count-two {
-  background: url("/images/header/count.png") -48px 0px;
+  background: url("../images/header/count.png") -48px 0px;
 }
 .counter .count-three {
-  background: url("/images/header/count.png") -72px 0px;
+  background: url("../images/header/count.png") -72px 0px;
 }
 .counter .count-four {
-  background: url("/images/header/count.png") -96px 0px;
+  background: url("../images/header/count.png") -96px 0px;
 }
 .counter .count-five {
-  background: url("/images/header/count.png") -120px 0px;
+  background: url("../images/header/count.png") -120px 0px;
 }
 .counter .count-six {
-  background: url("/images/header/count.png") -144px 0px;
+  background: url("../images/header/count.png") -144px 0px;
 }
 .counter .count-seven {
-  background: url("/images/header/count.png") -168px 0px;
+  background: url("../images/header/count.png") -168px 0px;
 }
 .counter .count-eight {
-  background: url("/images/header/count.png") -192px 0px;
+  background: url("../images/header/count.png") -192px 0px;
 }
 .counter .count-nine {
-  background: url("/images/header/count.png") -216px 0px;
+  background: url("../images/header/count.png") -216px 0px;
 }
 
 /*# sourceMappingURL=main.css.map */
