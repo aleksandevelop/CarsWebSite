@@ -1,55 +1,126 @@
+@use '../helpers' as *;
 
 
 .header{
   &__body{
-    position: relative;
-
     &-inner{
       display: flex;
       padding: 50px ;
       gap: 25px;
       align-items: end;
       background: url("../images/header/box.png") 100%/cover no-repeat;
-    }
 
-    &-logo{
-      align-self: center;
-    }
-
-    &-counter{
-      align-self: center;
+      @include tablet{
+        flex-wrap: wrap;
+        gap: 15px 25px;
+      }
 
     }
+  }
+  &__search{
+    height: 20px;
+    width: fluid(440, 150);
+    background-color: var(--color-gray-alt);
+    border: 1px solid var(--color-dark);
+    padding: 13px 15px;
+    border-radius: 5px;
 
-    &-search{
-      height: 20px;
-      width: 440px;
-      background-color: var(--color-gray);
-      border: 1px solid var(--color-dark);
-      padding: 13px 15px;
-
-      border-radius: 5px;
-
+    @include tablet{
+      width: 100%;
     }
+  }
+  &__actions{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
 
-
-    &-actions{
+    &--link{
+      text-decoration: none;
+      align-self: start;
+      border-bottom: 3px dotted #000;
+      line-height: 1.1;
+    }
+    &--list{
       display: flex;
-      flex-direction: column;
-      row-gap: 10px;
-
-      &--link{
-        text-decoration: none;
-        align-self: start;
-        border-bottom: 2px dotted #000;
-      }
-      &--list{
-        display: flex;
-        gap: 10px;
-      }
+      gap: 10px;
     }
-
-
   }
 
+  &__bottom{
+    &-inner{
+    }
+  }
+  &__navigation{
+    width: 100%;
+    background:
+    linear-gradient(
+        to bottom,
+        rgba(255,255,255,0.2) 0%,
+        rgba(255,255,255,0) 100%
+    ),
+    var(--color-dark);
+    border-radius: 10px 10px 0 0 ;
+    &-list{
+      display: flex;
+      overflow: auto;
+    }
+    &-item{
+      padding: 15px;
+      border-right: 1px solid gray;
+
+    }
+    &-button{
+      color: var(--color-light);
+      border: none;
+      text-transform: uppercase;
+      font-size: fluid(14, 10);
+      font-weight: 200;
+      background-color: transparent;
+
+      &:not(:last-child){
+        border-right: 1px solid gray;
+      }
+
+      &:hover{
+        color: var(--color-accent);
+      }
+      &.is-active{
+        color: var(--color-gray);
+        pointer-events: none;
+      }
+    }
+
+  }
+  &__rubric{
+    background:
+    linear-gradient(
+        to bottom,
+        rgba(255,255,255,0.9) 0%,
+        rgba(255,255,255, 0.1) 100%
+    ),
+    var(--color-gray);
+    padding: 8px;
+    color: #5b5b5b;
+    &-list{
+      display: flex;
+      gap: 10px;
+      overflow: auto;
+    }
+
+//    &-item{
+//      &:after{
+//        content: ',';
+//      }
+//      &:last-child{
+//        &:after{
+//          content: '...';
+//        }
+//      }
+//    }
+    &-link{
+      text-decoration: none;
+    }
+  }
 }
+
+

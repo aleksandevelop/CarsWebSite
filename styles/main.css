@@ -188,6 +188,7 @@ body {
   letter-spacing: -0.03em;
   color: var(--color-dark);
   background-color: var(--color-light);
+  overflow-x: hidden;
 }
 
 main {
@@ -306,6 +307,10 @@ button[aria-label]::before {
   content: "";
 }
 
+section {
+  padding-block: 30px;
+}
+
 @font-face {
   font-family: "Kumbh Sans";
   src: url(../fonts/KumbhSans-Regular.woff2) format("woff2");
@@ -373,6 +378,12 @@ button[aria-label]::before {
   }
 }
 
+@media (width <= 63.99875rem) {
+  .hidden-tablet {
+    display: none !important;
+  }
+}
+
 @media (width > 47.99875rem) {
   .visible-mobile {
     display: none !important;
@@ -382,7 +393,8 @@ button[aria-label]::before {
 :root {
   --color-light: #fff;
   --color-dark: #141414;
-  --color-gray: #eaebec;
+  --color-gray: #a6a6a6;
+  --color-gray-alt: #eaebec;
   --color-accent: #f2c943;
   --color-red: #ff5500;
   --border: 0.0625rem solid var(--color-dark);
@@ -391,9 +403,6 @@ button[aria-label]::before {
   --transition-duration: 0.2s;
 }
 
-.header__body {
-  position: relative;
-}
 .header__body-inner {
   display: flex;
   padding: 50px;
@@ -401,39 +410,90 @@ button[aria-label]::before {
   align-items: end;
   background: url("../images/header/box.png") 100%/cover no-repeat;
 }
-.header__body-logo {
-  align-self: center;
+@media (width <= 63.99875rem) {
+  .header__body-inner {
+    flex-wrap: wrap;
+    gap: 15px 25px;
+  }
 }
-.header__body-counter {
-  align-self: center;
-}
-.header__body-search {
+.header__search {
   height: 20px;
-  width: 440px;
-  background-color: var(--color-gray);
+  width: clamp(9.375rem, 4.7549019608rem + 18.954248366vw, 27.5rem);
+  background-color: var(--color-gray-alt);
   border: 1px solid var(--color-dark);
   padding: 13px 15px;
   border-radius: 5px;
 }
-.header__body-actions {
+@media (width <= 63.99875rem) {
+  .header__search {
+    width: 100%;
+  }
+}
+.header__actions {
   display: flex;
   flex-direction: column;
   row-gap: 10px;
 }
-.header__body-actions--link {
+.header__actions--link {
   text-decoration: none;
   align-self: start;
-  border-bottom: 2px dotted #000;
+  border-bottom: 3px dotted #000;
+  line-height: 1.1;
 }
-.header__body-actions--list {
+.header__actions--list {
   display: flex;
   gap: 10px;
+}
+.header__navigation {
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%), var(--color-dark);
+  border-radius: 10px 10px 0 0;
+}
+.header__navigation-list {
+  display: flex;
+  overflow: auto;
+}
+.header__navigation-item {
+  padding: 15px;
+  border-right: 1px solid gray;
+}
+.header__navigation-button {
+  color: var(--color-light);
+  border: none;
+  text-transform: uppercase;
+  font-size: clamp(0.625rem, 0.5612745098rem + 0.2614379085vw, 0.875rem);
+  font-weight: 200;
+  background-color: transparent;
+}
+.header__navigation-button:not(:last-child) {
+  border-right: 1px solid gray;
+}
+.header__navigation-button:hover {
+  color: var(--color-accent);
+}
+.header__navigation-button.is-active {
+  color: var(--color-gray);
+  pointer-events: none;
+}
+.header__rubric {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.1) 100%), var(--color-gray);
+  padding: 8px;
+  color: #5b5b5b;
+}
+.header__rubric-list {
+  display: flex;
+  gap: 10px;
+  overflow: auto;
+}
+.header__rubric-link {
+  text-decoration: none;
 }
 
 .counter {
   height: 40px;
   z-index: 10;
   display: flex;
+  align-self: end;
 }
 .counter .count {
   width: 24px;
@@ -468,6 +528,36 @@ button[aria-label]::before {
 }
 .counter .count-nine {
   background: url("../images/header/count.png") -216px 0px;
+}
+
+.preview__images {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+@media (width <= 47.99875rem) {
+  .preview__images {
+    align-items: center;
+    flex-direction: column;
+  }
+}
+.preview__images-mini {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+@media (width <= 47.99875rem) {
+  .preview__images-mini {
+    flex-direction: row;
+    padding-inline: 0;
+    overflow: auto;
+    align-items: center;
+  }
+}
+@media (width <= 47.99875rem) {
+  .preview__image-mini {
+    width: 150px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

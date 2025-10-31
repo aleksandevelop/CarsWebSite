@@ -11,96 +11,266 @@
   <link rel="stylesheet" href="./styles/main.css">
 </head>
 <body>
+<header class="header">
+  <div class="header__body">
+    <div class="header__body-inner container">
+      <a class="header__logo logo" href="/">
+        <img
+          src="./images/header/logo.jpg"
+          alt=""
+          width="240" height="70" loading="lazy"
+        />
+      </a>
+      <div class="header__counter counter">
+        <div class="count count-zero"></div>
+        <div class="count count-zero"></div>
+        <div class="count count-zero"></div>
+        <div class="count count-three"></div>
+        <div class="count count-one"></div>
+        <div class="count count-zero"></div>
+        <div class="count count-two"></div>
+        <div class="count count-two"></div>
+      </div>
 
-  <header class="header">
-    <div class="header__body">
-      <div class="header__body-inner container">
-        <a class="header__body-logo logo" href="/">
-          <img
-            src="./images/header/logo.jpg"
-            alt=""
-            width="240" height="70" loading="lazy"
-          />
-        </a>
-        <div class="header__body-counter counter">
-          <div class="count count-zero"></div>
-          <div class="count count-zero"></div>
-          <div class="count count-zero"></div>
-          <div class="count count-three"></div>
-          <div class="count count-one"></div>
-          <div class="count count-zero"></div>
-          <div class="count count-two"></div>
-          <div class="count count-two"></div>
-        </div>
+      <form action="">
+        <input
+          type="search"
+          class="header__search search"
+          placeholder="Поиск по объявлениям"
+          title="Поиск по объявлениям"
+        >
+      </form>
 
-        <form action="">
-          <input
-            type="search"
-            class="header__body-search search"
-            placeholder="Поиск по объявлениям"
-            title="Поиск по объявлениям"
-          >
-        </form>
+      <div class="header__actions">
+        <a class="header__actions--link link" href="/">добавить объявление</a>
+        <ul class="header__actions--list">
+          <li class="header__actions--item">
+            <a href="/" title="избранное">
+              <img
+                src="./images/header/heart.png"
+                alt=""
+                width="32" height="32" loading="lazy"
+              />
+            </a>
+          </li>
+          <li class="header__actions--item">
+            <a href="/" title="искать">
+              <img
+                src="./images/header/search.png"
+                alt=""
+                width="32" height="32" loading="lazy"
+              />
+            </a>
+          </li>
+          <li class="header__actions--item">
+            <a href="/" title="машины">
+              <img
+                src="./images/header/car.png"
+                alt=""
+                width="32" height="32" loading="lazy"
+              />
+            </a>
+          </li>
+          <li class="header__actions--item">
+            <a href="/" title="чат">
+              <img
+                src="./images/header/comment.png"
+                alt=""
+                width="32" height="32" loading="lazy"
+              />
+            </a>
+          </li>
 
-        <div class="header__body-actions">
-          <a class="header__body-actions--link link" href="/">добавить объявление</a>
-          <ul class="header__body-actions--list">
-            <li class="header__body-actions--item">
-              <a href="/" title="избранное">
-                <img
-                  src="./images/header/heart.png"
-                  alt=""
-                  width="32" height="32" loading="lazy"
-                />
-              </a>
-            </li>
-            <li class="header__body-actions--item">
-              <a href="/" title="искать">
-                <img
-                  src="./images/header/search.png"
-                  alt=""
-                  width="32" height="32" loading="lazy"
-                />
-              </a>
-            </li>
-            <li class="header__body-actions--item">
-              <a href="/" title="машины">
-                <img
-                  src="./images/header/car.png"
-                  alt=""
-                  width="32" height="32" loading="lazy"
-                />
-              </a>
-            </li>
-            <li class="header__body-actions--item">
-              <a href="/" title="чат">
-                <img
-                  src="./images/header/comment.png"
-                  alt=""
-                  width="32" height="32" loading="lazy"
-                />
-              </a>
-            </li>
+          <li class="header__actions--item">
+            <a href="/" title="профиль">
+              <img
+                src="./images/header/person.png"
+                alt=""
+                width="32" height="32" loading="lazy"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
 
-            <li class="header__body-actions--item">
-              <a href="/" title="профиль">
-                <img
-                  src="./images/header/person.png"
-                  alt=""
-                  width="32" height="32" loading="lazy"
-                />
-              </a>
-            </li>
-          </ul>
-        </div>
-
+    </div>
+  </div>
+  <div class="header__bottom">
+    <div class="header__bottom-inner container">
+      <nav class="header__navigation">
+        <ul class="header__navigation-list">
+          <li class="header__navigation-item">
+            <button
+              class="header__navigation-button "
+              type="button"
+            >
+              легковые автомобили
+            </button>
+          </li>
+          <li class="header__navigation-item">
+            <button
+              class="header__navigation-button "
+              type="button"
+            >
+              мототехника
+            </button>
+          </li>
+          <li class="header__navigation-item">
+            <button
+              class="header__navigation-button "
+              type="button"
+            >
+              спецтехника
+            </button>
+          </li>
+          <li class="header__navigation-item">
+            <button
+              class="header__navigation-button "
+              type="button"
+            >
+              услуги <span class="hidden-tablet">, сто и магазины</span>
+            </button>
+          </li>
+          <li class="header__navigation-item">
+            <button
+              class="header__navigation-button "
+              type="button"
+            >
+              запчасти и аксессуары
+            </button>
+          </li>
+          <li class="header__navigation-item">
+            <button
+              class="header__navigation-button is-active"
+              type="button"
+            >
+              форум
+            </button>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__rubric">
+        <ul class="header__rubric-list">
+          <li class="header__rubric-item">
+            <a class="header__rubric-link" href="/">
+              BMW,
+            </a>
+          </li>
+          <li class="header__rubric-item">
+            <a class="header__rubric-link" href="/">
+              Mercedes-Benz,
+            </a>
+          </li>
+          <li class="header__rubric-item">
+            <a class="header__rubric-link" href="/">
+              Opel,
+            </a>
+          </li>
+          <li class="header__rubric-item">
+            <a class="header__rubric-link" href="/">
+              Toyota,
+            </a>
+          </li>
+          <li class="header__rubric-item">
+            <a class="header__rubric-link" href="/">
+              Lexus,
+            </a>
+          </li>
+          <li class="header__rubric-item">
+            <a class="header__rubric-link" href="/">
+              Daewoo,
+            </a>
+          </li>
+          <li class="header__rubric-item">
+            <a class="header__rubric-link" href="/">
+              Hyundai,
+            </a>
+          </li>
+          <li class="header__rubric-item">
+            <a class="header__rubric-link" href="/">
+              ВАЗ,
+            </a>
+          </li>
+          <li class="header__rubric-item">
+            <a class="header__rubric-link" href="/">
+              Chevrolet,
+            </a>
+          </li>
+          <li class="header__rubric-item">
+            <a class="header__rubric-link" href="/">
+              Hafei,
+            </a>
+          </li>
+          <li class="header__rubric-item">
+            <a class="header__rubric-link" href="/">
+              Porshe,
+            </a>
+          </li>
+          <li class="header__rubric-item">
+            <a class="header__rubric-link" href="/">
+              Volkswagen,
+            </a>
+          </li>
+          <li class="header__rubric-item">
+            <a class="header__rubric-link" href="/">
+              Nissan,
+            </a>
+          </li>
+          <li class="header__rubric-item">
+            <a class="header__rubric-link" href="/">
+              Kia,
+            </a>
+          </li>
+          <li class="header__rubric-item">
+            <a class="header__rubric-link" href="/">
+              Honda,
+            </a>
+          </li>
+          <li class="header__rubric-item">
+            <a class="header__rubric-link" href="/">
+              Mitsubishi...
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
-    <div class="header__bottom">
+  </div>
+</header>
+<main class="main">
+  <section class="preview container">
+    <div class="preview__images">
+      <div class="preview__images preview__images-big">
+        <img
+          class="preview__image preview__image-big"
+          src="./images/preview/lada.png"
+          alt=""
+          width="1000" height="400" loading="lazy"
+        />
+      </div>
+      <div class="preview__images-mini">
+        <img
+          class="preview__image preview__image-mini"
+          src="./images/preview/lada2.png"
+          alt=""
+          width="237" height="129" loading="lazy"
+        />
+        <img
+          class="preview__image preview__image-mini"
+          src="./images/preview/lada2.png"
+          alt=""
+          width="237" height="129" loading="lazy"
+        />
+        <img
+          class="preview__image preview__image-mini"
+          src="./images/preview/lada2.png"
+          alt=""
+          width="237" height="129" loading="lazy"
+        />
+      </div>
+
 
     </div>
-  </header>
-
-
+  </section>
+</main>
 </body>
 </html>
