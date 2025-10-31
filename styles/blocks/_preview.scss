@@ -26,7 +26,6 @@
   }
 
   &__image{
-    &-big{}
     &-mini{
       @include mobile{
         width: 150px;
