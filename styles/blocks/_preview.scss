@@ -1,6 +1,7 @@
 @use '../helpers' as *;
 .preview{
   &__images{
+    position: relative;
     display: flex;
     justify-content: space-between;
     gap: 20px;
@@ -22,6 +23,12 @@
         align-items: center;
 
       }
+    }
+
+    &-advert{
+      position: absolute;
+      bottom: 5%;
+      left: 2%;
     }
   }
 
