@@ -356,6 +356,7 @@ section {
 .container {
   max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
   margin-inline: auto;
+  padding-inline: var(--container-padding-x);
 }
 
 .visually-hidden {
@@ -498,6 +499,11 @@ section {
   z-index: 10;
   display: flex;
   align-self: end;
+}
+@media (width <= 47.99875rem) {
+  .counter {
+    display: none;
+  }
 }
 .counter .count {
   width: 24px;
@@ -705,6 +711,195 @@ section {
 }
 .search__brand-see-button:hover {
   background-color: #ab8e30;
+}
+
+.section {
+  padding-inline: 50px;
+  color: var(--color-gray);
+  border: 1px solid var(--color-gray);
+  border-top: none;
+}
+@media (width <= 47.99875rem) {
+  .section {
+    padding-inline: 20px;
+  }
+}
+.section__header-inner {
+  display: flex;
+  padding: 10px 20px;
+  border: 1px solid var(--color-gray-alt);
+  gap: 50px;
+  overflow: auto;
+}
+.section__header-title {
+  font-size: 16px;
+  color: var(--color-dark);
+}
+.section__header-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+}
+.section__header-item {
+  align-self: center;
+}
+.section__header-link {
+  color: var(--color-accent);
+  letter-spacing: 0.5px;
+}
+.section__header-link:hover {
+  color: var(--color-dark);
+}
+.section__list {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+@media (width <= 63.99875rem) {
+  .section__list {
+    grid-template-columns: 1fr;
+  }
+}
+.section__item-top {
+  margin-top: 25px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%), var(--color-dark);
+  width: 100%;
+}
+.section__item-top-link {
+  background: transparent;
+  border: none;
+  color: var(--color-accent);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 5px 15px;
+  text-decoration: none;
+  align-items: center;
+  font-size: clamp(1.25rem, 1.1703431373rem + 0.3267973856vw, 1.5625rem);
+}
+@media (width <= 47.99875rem) {
+  .section__item-top-link {
+    padding: 0 10px;
+  }
+}
+.section__item-top-link--yellow {
+  color: var(--color-light);
+  background-color: var(--color-accent);
+}
+.section__item-top-link--yellow:hover {
+  background-color: #ab8e30;
+}
+.section__main {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+  outline: 1px solid var(--color-gray);
+  padding: 20px;
+}
+.section__main-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (width <= 47.99875rem) {
+  .section__main-info {
+    flex-direction: column;
+  }
+}
+.section__main-title {
+  color: var(--color-dark);
+  font-size: clamp(0.9375rem, 0.7781862745rem + 0.6535947712vw, 1.5625rem);
+  font-weight: 600;
+}
+@media (width <= 63.99875rem) {
+  .section__main-counter {
+    display: none;
+  }
+}
+.section__main-link {
+  text-decoration: none;
+  font-size: 15px;
+}
+.section__main-list {
+  padding-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+}
+@media (width <= 47.99875rem) {
+  .section__main-list {
+    gap: 3px;
+  }
+}
+.section__main-mark {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  outline: 1px solid var(--color-dark);
+  padding: 5px 20px;
+  row-gap: 5px;
+}
+@media (width <= 47.99875rem) {
+  .section__main-mark {
+    padding: 0 10px;
+  }
+}
+.section__main-button {
+  background-color: var(--color-accent);
+  color: var(--color-light);
+  border: none;
+  padding: 5px 50px;
+  margin-top: 25px;
+  align-self: center;
+  text-decoration: none;
+}
+.section__main-button:hover {
+  background-color: #ab8e30;
+}
+.section__cast {
+  margin-top: 25px;
+  padding: 20px;
+  background-color: var(--color-gray-alt);
+  display: flex;
+  flex-direction: column;
+}
+@media (width <= 47.99875rem) {
+  .section__cast {
+    padding: 10px;
+  }
+}
+.section__cast-model {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 10px;
+}
+@media (width <= 47.99875rem) {
+  .section__cast-model {
+    gap: 0;
+  }
+}
+.section__cast-selects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.section__cast-selects > select {
+  padding: 5px;
+}
+@media (width <= 90.06125rem) {
+  .section__cast-selects {
+    grid-template-columns: 1fr;
+  }
+}
+.section__cast-button {
+  margin-top: 20px;
+  font-weight: 600;
+  background-color: #bdbcbc;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  align-self: center;
 }
 
 /*# sourceMappingURL=main.css.map */
