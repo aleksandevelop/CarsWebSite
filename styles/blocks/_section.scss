@@ -1,22 +1,35 @@
 @use '../helpers' as *;
 
 .section {
-  padding-inline: 50px;
+  padding-top: 0;
+  padding-bottom: 40px;
+  padding-inline: 40px;
   color: var(--color-gray);
-  border: 1px solid var(--color-gray);
-  border-top: none;
 
   @include mobile {
     padding-inline: 20px;
   }
 
   &__header {
+    margin-inline: -30px;
+    margin-block: 25px;
+    padding: 15px 30px;
+    border-inline: 1px solid var(--color-gray);
+
+    @include mobile{
+      margin-block: 0;
+    }
+
     &-inner {
       display: flex;
       padding: 10px 20px;
       border: 1px solid var(--color-gray-alt);
       gap: 50px;
       overflow: auto;
+
+      @include mobile{
+        padding: 5px 10px;
+      }
     }
 
     &-title {
@@ -57,67 +70,80 @@
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 20px;
+    border: 1px solid var(--color-gray);
+    margin: -30px;
+    padding: 30px;
+    margin-top: 0;
 
     @include tablet {
 
       grid-template-columns: 1fr;
     }
-
+    @include mobile{
+      padding: 0 25px ;
+    }
   }
 
-  &__item {
-    &-top {
-      margin-top: 25px;
-      background: linear-gradient(
-          to bottom,
-          rgba(255, 255, 255, 0.2) 0%,
-          rgba(255, 255, 255, 0) 100%
-      ),
-      var(--color-dark);
+  &__top {
+    margin-top: 25px;
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.2) 0%,
+        rgba(255, 255, 255, 0) 100%
+    ),
+    var(--color-dark);
+    width: 100%;
+    text-transform: uppercase;
+
+    &-link {
+      background: transparent;
+      border: none;
+      color: var(--color-accent);
+      display: flex;
+      justify-content: space-between;
       width: 100%;
+      padding: 5px 15px;
+      text-decoration: none;
+      align-items: center;
+      font-size: fluid(20, 15);
 
-      &-link {
-        background: transparent;
-        border: none;
-        color: var(--color-accent);
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        padding: 5px 15px;
-        text-decoration: none;
-        align-items: center;
-        font-size: fluid(25, 20);
-
-        @include mobile{
-          padding: 0 10px;
-        }
-
-
-
-        &--yellow {
-          color: var(--color-light);
-          background-color: var(--color-accent);
-
-          &:hover {
-            background-color: #AB8E30FF;
-          }
-        }
+      @include mobile {
+        padding: 0 10px;
       }
 
-      &-desc {
+
+      &--yellow {
+        color: var(--color-light);
+        background-color: var(--color-accent);
+
+        &:hover {
+          background-color: #AB8E30FF;
+        }
+      }
+      &--gray {
+        color: var(--color-gray);
+        background-color: var(--color-gray-alt);
+        font-weight: 600;
       }
     }
 
-
+    &-desc {
+    }
   }
 
-  &__main {
+  &__main{
     display: flex;
     flex-direction: column;
     margin-top: 25px;
-    outline: 1px solid var(--color-gray);
     padding: 20px;
 
+    outline: 1px solid var(--color-gray);
+
+    @include mobile{
+      padding: 5px;
+    }
+  }
+  &__sell {
     &-info {
       display: flex;
       justify-content: space-between;
@@ -153,6 +179,7 @@
       justify-content: space-between;
       @include mobile {
         gap: 3px;
+        padding-top: 10px;
       }
     }
 
@@ -184,20 +211,17 @@
       &:hover {
         background-color: #AB8E30FF;
       }
+      @include mobile{
+        padding: 0 25px;
+      }
     }
 
   }
 
-
   &__cast {
-
-    margin-top: 25px;
-    padding: 20px;
     background-color: var(--color-gray-alt);
-    display: flex;
-    flex-direction: column;
 
-    @include mobile{
+    @include mobile {
       padding: 10px;
     }
 
@@ -237,5 +261,134 @@
     }
 
 
+  }
+  &__auto{
+    &-list{
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(3, 1fr);
+
+      @include mobile{
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+    }
+    &-link{
+      color: var(--color-dark);
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      text-decoration: none;
+      border: 1px solid var(--color-gray-alt);
+      padding: 10px;
+    }
+    &-title{
+      color: inherit;
+      font-size: fluid(30, 20);
+    }
+    &-info{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: fluid(20, 10);
+
+    }
+    &-cost{
+      font-size: fluid(25, 18);
+      white-space: nowrap;
+      color: var(--color-accent);
+    }
+    &-span{
+      display: block;
+    }
+    &-img{
+      width: 100%;
+      @include mobile-s{
+        max-width: 150px;
+      }
+    }
+  }
+  &__recommend{
+
+    padding:0 ;
+    &-list{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      @include mobile{
+        gap: 0;
+      }
+    }
+    &-item{
+      padding: 25px ;
+      border-bottom: 1px solid var(--color-gray);
+
+      @include mobile{
+        padding: 10px;
+      }
+    }
+    &-link{
+      text-decoration: none;
+      display: flex;
+      gap: 10px ;
+    }
+    &-info{
+      color: var(--color-dark);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      &:hover{
+        color: var(--color-accent);
+      }
+    }
+
+    &-title{
+      color: inherit;
+    }
+    &-cost{
+      font-size: 25px;
+      color: var(--color-accent);
+    }
+  }
+
+  &__services{
+    padding:0 ;
+    &-list{
+      display: flex;
+      gap: 10px;
+    }
+    &-item{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 15px;
+      border-right: 1px solid var(--color-gray);
+      min-height: 300px;
+      @include mobile{
+        padding: 5px;
+        min-height: 200px;
+
+      }
+    }
+    &-link{
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+    }
+
+
+
+  }
+  &__service{
+
+    &-title{
+      font-size: fluid( 25, 15);
+    }
+    &-teg{
+      font-weight: 600;
+      color: var(--color-accent);
+    }
   }
 }
