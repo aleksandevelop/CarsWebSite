@@ -16,8 +16,8 @@
     padding: 15px 30px;
     border-inline: 1px solid var(--color-gray);
 
-    @include mobile{
-      margin-block: 0;
+    @include mobile {
+      //      margin-block: 0;
     }
 
     &-inner {
@@ -27,7 +27,7 @@
       gap: 50px;
       overflow: auto;
 
-      @include mobile{
+      @include mobile {
         padding: 5px 10px;
       }
     }
@@ -75,16 +75,25 @@
     padding: 30px;
     margin-top: 0;
 
+    &-big {
+      grid-template-columns: 1fr;
+    }
+
     @include tablet {
 
       grid-template-columns: 1fr;
     }
-    @include mobile{
-      padding: 0 25px ;
+    @include mobile {
+      padding: 0 25px;
+      border: none;
     }
   }
 
+  &__item {
+  }
+
   &__top {
+    padding: 5px 15px;
     margin-top: 25px;
     background: linear-gradient(
         to bottom,
@@ -94,15 +103,37 @@
     var(--color-dark);
     width: 100%;
     text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-light);
+
+    @include mobile {
+      flex-direction: column;
+      row-gap: 10px;
+    }
+
+    &--yellow {
+      color: var(--color-light);
+      background-color: var(--color-accent);
+
+      &:hover {
+        background-color: #AB8E30FF;
+      }
+    }
+
+    &--gray {
+      color: var(--color-gray);
+      background-color: var(--color-gray-alt);
+      font-weight: 600;
+    }
 
     &-link {
       background: transparent;
       border: none;
-      color: var(--color-accent);
       display: flex;
       justify-content: space-between;
       width: 100%;
-      padding: 5px 15px;
       text-decoration: none;
       align-items: center;
       font-size: fluid(20, 15);
@@ -112,26 +143,28 @@
       }
 
 
-      &--yellow {
-        color: var(--color-light);
-        background-color: var(--color-accent);
-
-        &:hover {
-          background-color: #AB8E30FF;
-        }
-      }
-      &--gray {
-        color: var(--color-gray);
-        background-color: var(--color-gray-alt);
-        font-weight: 600;
-      }
     }
 
     &-desc {
     }
+
+    &-nav {
+      display: flex;
+      white-space: nowrap;
+      gap: 5px;
+
+      &-link {
+        text-decoration: none;
+      }
+    }
+
+    &-between {
+      color: var(--color-accent);
+    }
+
   }
 
-  &__main{
+  &__main {
     display: flex;
     flex-direction: column;
     margin-top: 25px;
@@ -139,10 +172,16 @@
 
     outline: 1px solid var(--color-gray);
 
-    @include mobile{
+    &:last-child {
+      border: none;
+    }
+
+    @include mobile {
       padding: 5px;
     }
   }
+
+
   &__sell {
     &-info {
       display: flex;
@@ -211,7 +250,8 @@
       &:hover {
         background-color: #AB8E30FF;
       }
-      @include mobile{
+
+      @include mobile {
         padding: 0 25px;
       }
     }
@@ -262,18 +302,20 @@
 
 
   }
-  &__auto{
-    &-list{
+
+  &__auto {
+    &-list {
       display: grid;
       gap: 10px;
       grid-template-columns: repeat(3, 1fr);
 
-      @include mobile{
+      @include mobile {
         grid-template-columns: repeat(2, 1fr);
       }
 
     }
-    &-link{
+
+    &-link {
       color: var(--color-dark);
       display: flex;
       flex-direction: column;
@@ -282,113 +324,191 @@
       border: 1px solid var(--color-gray-alt);
       padding: 10px;
     }
-    &-title{
+
+    &-title {
       color: inherit;
       font-size: fluid(30, 20);
     }
-    &-info{
+
+    &-info {
       display: flex;
       align-items: center;
       justify-content: space-between;
       font-size: fluid(20, 10);
 
     }
-    &-cost{
+
+    &-cost {
       font-size: fluid(25, 18);
       white-space: nowrap;
       color: var(--color-accent);
     }
-    &-span{
+
+    &-span {
       display: block;
     }
-    &-img{
+
+    &-img {
       width: 100%;
-      @include mobile-s{
+      @include mobile-s {
         max-width: 150px;
       }
     }
   }
-  &__recommend{
 
-    padding:0 ;
-    &-list{
+  &__recommend {
+
+    padding: 0;
+
+    &-list {
       display: flex;
       flex-direction: column;
       gap: 20px;
 
-      @include mobile{
+      @include mobile {
         gap: 0;
       }
     }
-    &-item{
-      padding: 25px ;
+
+    &-item {
+      padding: 25px;
       border-bottom: 1px solid var(--color-gray);
 
-      @include mobile{
-        padding: 10px;
+      @include mobile {
+        padding: 5px;
       }
     }
-    &-link{
+
+    &-link {
       text-decoration: none;
       display: flex;
-      gap: 10px ;
+      gap: 10px;
     }
-    &-info{
+
+    &-info {
       color: var(--color-dark);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
 
-      &:hover{
+      &:hover {
         color: var(--color-accent);
       }
     }
 
-    &-title{
+    &-title {
       color: inherit;
     }
-    &-cost{
-      font-size: 25px;
+
+    &-cost {
+      font-size: fluid(25, 20);
       color: var(--color-accent);
     }
   }
 
-  &__services{
-    padding:0 ;
-    &-list{
+  &__services {
+    padding: 0;
+
+    &-list {
       display: flex;
       gap: 10px;
     }
-    &-item{
+
+    &-item {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       padding: 15px;
       border-right: 1px solid var(--color-gray);
       min-height: 300px;
-      @include mobile{
+      @include mobile {
         padding: 5px;
         min-height: 200px;
 
       }
     }
-    &-link{
+
+    &-link {
       display: flex;
       flex-direction: column;
       text-decoration: none;
     }
 
 
-
   }
-  &__service{
 
-    &-title{
-      font-size: fluid( 25, 15);
+  &__service {
+
+    &-title {
+      font-size: fluid(25, 15);
     }
-    &-teg{
+
+    &-teg {
       font-weight: 600;
       color: var(--color-accent);
     }
   }
+
+
+  &__news {
+    padding: 0;
+    border: none;
+
+    &-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      @include mobile {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    &-link {
+      display: flex;
+      align-items: center;
+      padding: 15px;
+      gap: 15px;
+      border: 1px solid var(--color-gray);
+      color: var(--color-dark);
+      text-decoration: none;
+
+      @include tablet {
+        flex-direction: column;
+      }
+      @include mobile {
+        flex-direction: row;
+        padding: 5px;
+      }
+
+    }
+
+    &-img {
+      @include mobile {
+        max-width: 150px;
+      }
+    }
+
+    &-title {
+      font-weight: 600;
+      font-size: fluid(25, 15);
+    }
+
+    &-date {
+      color: var(--color-gray);
+
+      &:hover {
+        color: var(--color-gray);
+      }
+
+    }
+
+    &-desc {
+    }
+
+    &-img {
+
+    }
+  }
+
+
 }
