@@ -1,0 +1,55 @@
+@use "../helpers" as *;
+
+.auto {
+  &-list {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+
+    @include mobile {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+  }
+
+  &-link {
+    color: var(--color-dark);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-decoration: none;
+    border: 1px solid var(--color-gray-alt);
+    padding: 10px;
+  }
+
+  &-title {
+    color: inherit;
+    font-size: fluid(30, 20);
+  }
+
+  &-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: fluid(18, 13);
+
+  }
+
+  &-cost {
+    font-size: fluid(25, 18);
+    white-space: nowrap;
+    color: var(--color-accent);
+  }
+
+  &-span {
+    display: block;
+    white-space: nowrap;
+  }
+
+  &-img {
+    width: 100%;
+    @include mobile-s {
+      max-width: 150px;
+    }
+  }
+}

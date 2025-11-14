@@ -7,8 +7,8 @@ body {
 
   display: flex;
   flex-direction: column;
-
-//  font-family: var(--font-family-base);
+  background: url("../images/background.jpg");
+  font-family: 'Trebuchet MS', 'Calibri', 'Candara', sans-serif;
   letter-spacing: -0.03em;
   color: var(--color-dark);
   background-color: var(--color-light);
@@ -31,7 +31,7 @@ h5,
 .h5,
 h6,
 .h6 {
-//  color: var(--color-light);
+  color: var(--color-light);
 }
 h1,
 .h1,
@@ -39,7 +39,6 @@ h2,
 .h2,
 h3,
 .h3 {
-  font-family: var(--font-family-accent);
   font-weight: 500;
 }
 h4,

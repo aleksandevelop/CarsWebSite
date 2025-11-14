@@ -1,0 +1,54 @@
+@use "../helpers" as *;
+.services {
+  padding: 0;
+
+  &-list {
+    display: flex;
+    gap: 10px;
+
+    @include tablet{
+      justify-content: space-between;
+    }
+  }
+
+  &-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    border-right: 1px solid var(--color-gray);
+    min-height: 300px;
+
+    @include tablet{
+      border: 1px solid var(--color-gray);
+      min-height: 150px;
+
+
+    }
+    @include mobile {
+      padding: 5px;
+
+    }
+  }
+
+  &-link {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+  }
+
+
+}
+.service {
+
+     &-title {
+       font-size: fluid(25, 15);
+       color: var(--color-dark);
+       font-weight: bold;
+     }
+
+     &-teg {
+       font-weight: 600;
+       color: var(--color-accent);
+     }
+   }

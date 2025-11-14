@@ -3,8 +3,7 @@
   height: 40px;
   z-index: 10;
   display: flex;
-  align-self: end;
-  
+
   @include mobile{
     display: none;
   }

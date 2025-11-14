@@ -1,27 +1,29 @@
 @use '../helpers' as *;
 
 
-.header{
-  &__body{
-    &-inner{
+.header {
+  &__body {
+    &-inner {
       display: flex;
-      padding: 50px ;
+      padding: 50px;
       gap: 25px;
-      align-items: end;
+      align-items: center;
+      justify-content: space-between;
       background: url("../images/header/box.png") 100%/cover no-repeat;
 
-      @include tablet{
+      @include tablet {
         flex-wrap: wrap;
         gap: 15px 25px;
       }
-      @include mobile{
-        padding:15px 25px;
+      @include mobile {
+        padding: 15px 25px;
 
       }
 
     }
   }
-  &__search{
+
+  &__search {
     height: 20px;
     width: fluid(440, 150);
     background-color: var(--color-gray-alt);
@@ -29,94 +31,140 @@
     padding: 13px 15px;
     border-radius: 5px;
 
-    @include tablet{
+    &:hover {
+      transform: scale(1.01);
+    }
+
+    @include tablet {
       width: 100%;
     }
   }
-  &__actions{
+
+  &__actions {
     display: flex;
     flex-direction: column;
     row-gap: 10px;
 
-    &--link{
+    &--link {
       text-decoration: none;
       align-self: start;
       border-bottom: 3px dotted #000;
       line-height: 1.1;
+
+
     }
-    &--list{
+
+    &--list {
       display: flex;
       gap: 10px;
     }
-  }
 
-  &__bottom{
-    &-inner{
+    &--item {
+      transition-duration: var(--transition-duration);
+
+      &:hover {
+        transform: scale(1.1);
+      }
     }
   }
-  &__navigation{
+
+  &__bottom {
+    &-inner {
+    }
+  }
+
+  &__navigation {
     width: 100%;
-    background:
-    linear-gradient(
+    background: linear-gradient(
         to bottom,
-        rgba(255,255,255,0.2) 0%,
-        rgba(255,255,255,0) 100%
+        rgba(255, 255, 255, 0.2) 0%,
+        rgba(255, 255, 255, 0) 100%
     ),
     var(--color-dark);
-    border-radius: 10px 10px 0 0 ;
-    &-list{
+    border-radius: 10px 10px 0 0;
+
+    &-list {
       display: flex;
       overflow: auto;
-    }
-    &-item{
-      padding: 15px;
-      border-right: 1px solid gray;
+      justify-content: center;
 
-      @include mobile{
+      @include mobile {
+
+        justify-content: start;
+      }
+    }
+
+    &-item {
+      padding: 15px;
+
+      &:not(:last-child) {
+        border-right: 1px solid gray;
+      }
+
+      @include mobile {
         padding: 8px;
       }
 
     }
-    &-button{
+
+    &-link {
+      text-decoration: none;
       color: var(--color-light);
       border: none;
       text-transform: uppercase;
       font-size: fluid(14, 10);
-      font-weight: 200;
+      font-weight: bold;
       background-color: transparent;
 
-      &:not(:last-child){
+      &:not(:last-child) {
         border-right: 1px solid gray;
       }
 
-      &:hover{
+      &:hover {
         color: var(--color-accent);
       }
-      &.is-active{
+
+      &.is-active {
         color: var(--color-gray);
         pointer-events: none;
       }
     }
 
   }
-  &__rubric{
-    background:
-    linear-gradient(
+
+  &__rubric {
+    display: flex;
+    flex: 0 0 100%;
+    background: linear-gradient(
         to bottom,
-        rgba(255,255,255,0.9) 0%,
-        rgba(255,255,255, 0.1) 100%
+        rgba(255, 255, 255, 0.9) 0%,
+        rgba(255, 255, 255, 0.1) 100%
     ),
     var(--color-gray);
     padding: 8px;
     color: #5b5b5b;
-    &-list{
+    overflow-x: hidden;
+
+
+    &-list {
       display: flex;
       gap: 10px;
-      overflow: auto;
+      white-space: nowrap;
+      will-change: transform;
+      animation: scrolling 15s linear infinite;
+      padding-right: 20px;
+      @keyframes scrolling {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
     }
 
 
-    &-link{
+    &-link {
       text-decoration: none;
     }
   }

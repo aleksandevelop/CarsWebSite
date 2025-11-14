@@ -1,0 +1,166 @@
+
+@use '../helpers' as *;
+.choose {
+  background-color: var(--color-gray-alt);
+
+  @include mobile {
+    padding: 10px;
+  }
+
+  &-model {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 10px;
+
+    @include mobile {
+      gap: 0;
+    }
+  }
+
+  &-selects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+
+    & > select {
+      padding: 5px;
+    }
+
+    @include laptop {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+  }
+
+  &-button {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    margin-top: 20px;
+    color: #4a4a4a;
+    background: linear-gradient(top, #f2f2f2, #e0dfdf);
+    border: 1px solid #d7d7d7;
+    padding: 10px 15px;
+    border-radius: 5px;
+    align-self: center;
+    font-weight: bold;
+    gap: 10px;
+
+    &:hover{
+      background-color: var(--color-gray-alt);
+    }
+  }
+
+  &-option{
+    padding: 5px;
+  }
+  &-sedan {
+    display: inline-block;
+    width: 48px;
+    height: 20px;
+    background: url("../images/carOptions/sprite.png") 0 0 no-repeat;
+
+    input:checked + & {
+      background-position: 0 -20px;
+    }
+  }
+
+  &-hatchback {
+    display: inline-block;
+    width: 48px;
+    height: 20px;
+    background: url("../images/carOptions/sprite.png") -48px 0 no-repeat;
+
+    input:checked + & {
+      background-position: -48px -20px;
+    }
+  }
+
+  &-universal {
+    display: inline-block;
+    width: 48px;
+    height: 20px;
+    background: url("../images/carOptions/sprite.png") 0 -40px no-repeat;
+
+    input:checked + & {
+      background-position: 0 -60px;
+    }
+  }
+
+  &-crossover {
+    display: inline-block;
+    width: 48px;
+    height: 20px;
+    background: url("../images/carOptions/sprite.png") 0 -120px no-repeat;
+
+    input:checked + & {
+      background-position: 0 -140px;
+    }
+  }
+
+  &-suv {
+    display: inline-block;
+    width: 48px;
+    height: 20px;
+    background: url("../images/carOptions/sprite.png") -48px -40px no-repeat;
+
+    input:checked + & {
+      background-position: -48px -60px;
+    }
+  }
+
+  &-coupe {
+    display: inline-block;
+    width: 48px;
+    height: 20px;
+    background: url("../images/carOptions/sprite.png") -96px 0 no-repeat; // Исправлено!
+
+    input:checked + & {
+      background-position: -96px -20px; // Исправлено!
+    }
+  }
+
+  &-convertible {
+    display: inline-block;
+    width: 48px;
+    height: 20px;
+    background: url("../images/carOptions/sprite.png") 0 -80px no-repeat;
+
+    input:checked + & {
+      background-position: 0 -100px; // Исправлено (убрал px)
+    }
+  }
+
+  &-pickup {
+    display: inline-block;
+    width: 48px;
+    height: 20px;
+    background: url("../images/carOptions/sprite.png") -96px -40px no-repeat;
+
+    input:checked + & {
+      background-position: -96px -60px;
+    }
+  }
+
+  &-minivan {
+    display: inline-block;
+    width: 48px;
+    height: 20px;
+    background: url("../images/carOptions/sprite.png") -48px -80px no-repeat;
+
+    input:checked + & {
+      background-position: -48px -100px;
+    }
+  }
+
+  &-wagon {
+    display: inline-block;
+    width: 48px;
+    height: 20px;
+    background: url("../images/carOptions/sprite.png") -96px -80px no-repeat;
+
+    input:checked + & {
+      background-position: -96px -100px; // Исправлено (добавил пробел)
+    }
+  }
+}
