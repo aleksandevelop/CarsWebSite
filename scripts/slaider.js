@@ -9,6 +9,8 @@ let swiper = new Swiper('.swiper-container', {
     delay: 3000,  // Автоматический переход через 2.5 сек
     disableOnInteraction: false,  // Автоплей не остановится при взаимодействии
   },
+
+  allowTouchMove: false, // запрещает любое перемещение (касания и мышь)
   speed: 750,  // Скорость анимации
   slidesPerView: 1,  // Показать только один слайд
   spaceBetween: 10,  // Нет промежутков между слайдами

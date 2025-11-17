@@ -1,7 +1,8 @@
 
 @use '../helpers' as *;
 .choose {
-  background-color: var(--color-gray-alt);
+  background-color: #f5f5f5;
+  padding:15px ;
 
   @include mobile {
     padding: 10px;
@@ -10,7 +11,8 @@
   &-model {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 10px;
+
+    gap: 2px;
 
     @include mobile {
       gap: 0;
@@ -21,30 +23,36 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
+    font-size: 13px;
 
     & > select {
       padding: 5px;
+      width: 120px;
     }
 
     @include laptop {
-      grid-template-columns: repeat(2, 1fr);
+//      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile{
+      display: block;
     }
 
   }
 
   &-button {
     display: flex;
-    justify-self: center;
     align-items: center;
-    margin-top: 20px;
     color: #4a4a4a;
     background: linear-gradient(top, #f2f2f2, #e0dfdf);
-    border: 1px solid #d7d7d7;
-    padding: 10px 15px;
+    border: var(--border);
+    padding: 6px 9px;
     border-radius: 5px;
     align-self: center;
     font-weight: bold;
     gap: 10px;
+    font-size: 14px;
+
 
     &:hover{
       background-color: var(--color-gray-alt);
@@ -52,7 +60,6 @@
   }
 
   &-option{
-    padding: 5px;
   }
   &-sedan {
     display: inline-block;

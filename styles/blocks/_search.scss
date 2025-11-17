@@ -1,6 +1,8 @@
 
 @use '../helpers' as *;
 .search{
+
+
   &-info {
     display: flex;
     justify-content: space-between;
@@ -13,8 +15,9 @@
 
   &-title {
     color: var(--color-dark);
-    font-size: fluid(25, 15);
-    font-weight: 600;
+    font-size: 18px;
+    font-weight: bold;
+
   }
 
   &-counter {
@@ -29,7 +32,6 @@
   }
 
   &-list {
-    padding-top: 25px;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -48,12 +50,14 @@
     flex-direction: column;
     align-items: center;
     outline: 1px solid var(--color-dark);
-    padding: 5px 20px;
-    row-gap: 5px;
+    padding: 0 10px;
 
     @include mobile {
       padding: 0 10px;
     }
+  }
+  &-desc{
+    font-size: 12px;
   }
 
   &-button {
@@ -61,7 +65,6 @@
     color: var(--color-light);
     border: none;
     padding: 5px 50px;
-    margin-top: 25px;
     align-self: center;
     text-decoration: none;
 

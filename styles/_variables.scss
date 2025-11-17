@@ -11,11 +11,9 @@
 
 //  --gradient: ;
 
-  --border: #{rem(1)} solid var(--color-dark);
-//  --font-family-base: 'Inter', sans-serif;
-//  --font-family-accent: 'Kumbh Sans', sans-serif;
+  --border: #{rem(1)} solid var(--color-gray-alt);
 
-  --container-width: #{rem(1280)};
+  --container-width: #{rem(980)};
   --container-padding-x: #{rem(16)};
 
   --transition-duration: 0.2s;

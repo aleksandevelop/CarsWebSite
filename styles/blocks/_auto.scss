@@ -18,25 +18,25 @@
     flex-direction: column;
     gap: 5px;
     text-decoration: none;
-    border: 1px solid var(--color-gray-alt);
+    border: var(--border);
     padding: 10px;
   }
 
   &-title {
     color: inherit;
-    font-size: fluid(30, 20);
+    font-size: 25px;
   }
 
   &-info {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: fluid(18, 13);
+    font-size: 14px;
 
   }
 
   &-cost {
-    font-size: fluid(25, 18);
+    font-size: 20px;
     white-space: nowrap;
     color: var(--color-accent);
   }

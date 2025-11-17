@@ -1,66 +1,14 @@
 @use '../helpers' as *;
 
 .section {
-  padding-top: 0;
-  padding-bottom: 40px;
-  padding-inline: 40px;
+  padding-block: 15px;
   color: var(--color-gray);
 
   @include tablet {
     padding-inline: 20px;
   }
 
-  &__header {
-    margin-inline: -30px;
-    margin-block: 25px;
-    padding: 15px 30px;
-    border-inline: 1px solid var(--color-gray);
 
-    @include tablet {
-      margin-inline: 0;
-      padding: 0;
-
-    }
-
-    &-inner {
-      display: flex;
-      padding: 10px 20px;
-      border: 1px solid var(--color-gray-alt);
-      gap: 50px;
-      overflow: auto;
-
-      @include mobile {
-        padding: 5px 10px;
-      }
-    }
-
-    &-title {
-      font-size: 16px;
-      color: var(--color-dark);
-    }
-
-    &-nav {
-    }
-
-    &-list {
-      display: flex;
-      justify-content: space-between;
-      gap: 25px;
-    }
-
-    &-item {
-      align-self: center;
-    }
-
-    &-link {
-      color: var(--color-accent);
-      letter-spacing: 0.5px;
-
-      &:hover {
-        color: var(--color-dark);
-      }
-    }
-  }
   &__body {
 
     &-inner {
@@ -68,12 +16,11 @@
   }
   &__list {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 7fr 3fr;
     gap: 20px;
+    padding: 20px ;
     border: 1px solid var(--color-gray);
-    margin: -30px;
-    padding: 30px;
-    margin-top: 0;
+
 
     &-big {
       grid-template-columns: 1fr;
@@ -90,10 +37,12 @@
     }
   }
   &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
   }
   &__top {
     padding: 12px;
-    margin-top: 25px;
     background: linear-gradient(
         to bottom,
         rgba(255, 255, 255, 0.2) 0%,
@@ -107,16 +56,12 @@
     align-items: center;
     color: var(--color-light);
     transition: all 0.5s ease;
+    font-size: 13px;
 
     &:hover {
       transform: scale(1.01);
       box-shadow: 0 0 20px rgba(247, 255, 0, 0.3);
     }
-
-
-
-
-
     @include mobile {
       flex-direction: column;
       row-gap: 10px;
@@ -161,6 +106,8 @@
     &-desc {
       position: relative;
       z-index: 2;
+      font-weight: bold;
+      font-size: 14px;
     }
 
     &-nav {
@@ -184,10 +131,12 @@
   &__main {
     display: flex;
     flex-direction: column;
-    margin-top: 25px;
+    justify-content: space-between;
+    height: 100%;
+    gap: 25px;
     padding: 20px;
 
-    outline: 1px solid var(--color-gray);
+    outline: 1px solid var(--color-gray-alt);
 
     &:last-child {
       border: none;
@@ -196,6 +145,13 @@
     @include mobile {
       padding: 5px;
     }
+  }
+  &__form{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 20px;
+    height: 100%;
   }
 
 }

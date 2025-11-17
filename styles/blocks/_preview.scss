@@ -25,6 +25,11 @@
     &-swiper{
       width: 80%;
       overflow: hidden;
+
+      @include mobile{
+        width: 100%;
+
+      }
     }
     &-slide{
     }
@@ -41,8 +46,8 @@
         flex-direction: row;
         padding-inline: 0;
         overflow: auto;
-        align-items: center;
-
+        width: 100%;
+        justify-content: center;
       }
     }
 

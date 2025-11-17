@@ -4,23 +4,28 @@
 
   &-list {
     display: flex;
-    gap: 10px;
+    overflow: auto;
 
+    gap: 10px;
+    height: 100%;
     @include tablet{
       justify-content: space-between;
     }
   }
 
   &-item {
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 15px;
-    border-right: 1px solid var(--color-gray);
     min-height: 300px;
 
+    &:not(:last-child){
+    border-right: var(--border);
+  }
     @include tablet{
-      border: 1px solid var(--color-gray);
+      border: var(--border);
       min-height: 150px;
 
 
@@ -36,18 +41,23 @@
     flex-direction: column;
     text-decoration: none;
   }
+  &-time{
+    font-size: 13px;
+    white-space: nowrap;
+  }
 
 
 }
 .service {
 
      &-title {
-       font-size: fluid(25, 15);
+       font-size: 19px;
        color: var(--color-dark);
        font-weight: bold;
      }
 
      &-teg {
+       font-size: 16px;
        font-weight: 600;
        color: var(--color-accent);
      }
