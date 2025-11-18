@@ -883,7 +883,6 @@ button[aria-label]::before {
 .choose-model {
   display: flex;
   flex-wrap: wrap;
-  gap: 2px;
 }
 @media (width <= 63.99875rem) {
   .choose-model {
@@ -899,6 +898,7 @@ button[aria-label]::before {
   font-size: 13px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
 }
 .choose-selects > select {
   padding: 10px;
