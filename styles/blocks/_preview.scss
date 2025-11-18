@@ -1,6 +1,6 @@
 @use '../helpers' as *;
 .preview{
-  padding-top: 10px;
+  padding-block: 15px;
   overflow: hidden;
   padding-left: 12px; // костыльно сделано, тк изображение на пару пикселей не сходится, выгдяит плохо (оригинал padding - 15px)
 

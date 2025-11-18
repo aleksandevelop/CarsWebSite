@@ -11,6 +11,9 @@
     @include tablet{
       justify-content: space-between;
     }
+    @include mobile{
+    flex-direction: column;
+    }
   }
 
   &-item {
@@ -32,7 +35,8 @@
     }
     @include mobile {
       padding: 5px;
-
+      height: 100%;
+      min-height: 50px;
     }
   }
 

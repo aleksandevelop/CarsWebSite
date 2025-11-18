@@ -11,32 +11,31 @@
   &-model {
     display: flex;
     flex-wrap: wrap;
-
     gap: 2px;
 
+
+    @include tablet{
+      justify-content: space-between;
+    }
     @include mobile {
       gap: 0;
     }
   }
 
   &-selects {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
     font-size: 13px;
-
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     & > select {
+      padding: 10px;
+      width: 100%;
+
+      @include tablet{
       padding: 5px;
-      width: 120px;
+      }
     }
 
-    @include laptop {
-//      grid-template-columns: repeat(2, 1fr);
-    }
 
-    @include mobile{
-      display: block;
-    }
 
   }
 

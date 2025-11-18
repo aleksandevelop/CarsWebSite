@@ -13,7 +13,9 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <!-- Подключаем скрипт Swiper -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script src="./scripts/slaider.js" defer></script>
+  <script src="scripts/previewSlider.js" defer></script>
+  <script src="scripts/recommendSlider.js" defer></script>
+  <script src="scripts/recommendSlider2.js" defer></script>
 </head>
 <body>
 <header class="header">
@@ -142,9 +144,9 @@
               запчасти и аксессуары
             </a>
           </li>
-          <li class="header__navigation-item">
+          <li class="header__navigation-item ">
             <a
-              class="header__navigation-link is-active"
+              class="header__navigation-link is-active last"
               href="/"
             >
               форум
@@ -154,210 +156,196 @@
       </nav>
       <div class="header__rubric">
         <ul class="header__rubric-list">
-
           <li class="header__rubric-item">
             <a class="header__rubric-link" href="/">
-              BMW,
+              BMW(<span class="rubric__count-bmw">48</span>),
             </a>
           </li>
           <li class="header__rubric-item">
             <a class="header__rubric-link" href="/">
-              Mercedes-Benz,
+              Mercedes-Benz(<span class="rubric__count-mercedez">32</span>),
             </a>
           </li>
           <li class="header__rubric-item">
             <a class="header__rubric-link" href="/">
-              Opel,
+              Opel(<span class="rubric__count-opel">14</span>),
             </a>
           </li>
           <li class="header__rubric-item">
             <a class="header__rubric-link" href="/">
-              Toyota,
+              Toyota(<span class="rubric__count-toyota">67</span>),
             </a>
           </li>
           <li class="header__rubric-item">
             <a class="header__rubric-link" href="/">
-              Lexus,
+              Lexus(<span class="rubric__count-lexus">45</span>),
             </a>
           </li>
           <li class="header__rubric-item">
             <a class="header__rubric-link" href="/">
-              Daewoo,
+              Daewoo(<span class="rubric__count-daewoo">32</span>),
             </a>
           </li>
           <li class="header__rubric-item">
             <a class="header__rubric-link" href="/">
-              Hyundai,
+              Hyundai(<span class="rubric__count-hyundai">75</span>),
             </a>
           </li>
           <li class="header__rubric-item">
             <a class="header__rubric-link" href="/">
-              ВАЗ,
+              ВАЗ(<span class="rubric__count-vaz">23</span>),
             </a>
           </li>
           <li class="header__rubric-item">
             <a class="header__rubric-link" href="/">
-              Chevrolet,
+              Chevrolet(<span class="rubric__count-chevrolet">12</span>),
             </a>
           </li>
           <li class="header__rubric-item">
             <a class="header__rubric-link" href="/">
-              Hafei,
+              Hafei(<span class="rubric__count-hafei">10</span>),
             </a>
           </li>
           <li class="header__rubric-item">
             <a class="header__rubric-link" href="/">
-              Porshe,
+              Porshe(<span class="rubric__count-porshe">87</span>),
             </a>
           </li>
           <li class="header__rubric-item">
             <a class="header__rubric-link" href="/">
-              Volkswagen,
+              Volkswagen(<span class="rubric__count-volkswagen">63</span>),
             </a>
           </li>
           <li class="header__rubric-item">
             <a class="header__rubric-link" href="/">
-              Nissan,
+              Nissan(<span class="rubric__count-nissan">52</span>),
             </a>
           </li>
           <li class="header__rubric-item">
             <a class="header__rubric-link" href="/">
-              Kia,
+              Kia(<span class="rubric__count-kia">63</span>),
             </a>
           </li>
           <li class="header__rubric-item">
             <a class="header__rubric-link" href="/">
-              Honda,
+              Hyundai(<span class="rubric__count-hyundai">75</span>),
             </a>
           </li>
           <li class="header__rubric-item">
             <a class="header__rubric-link" href="/">
-              Nissan,
+              ВАЗ(<span class="rubric__count-vaz">23</span>),
             </a>
           </li>
           <li class="header__rubric-item">
             <a class="header__rubric-link" href="/">
-              Kia,
+              Chevrolet(<span class="rubric__count-chevrolet">12</span>),
             </a>
           </li>
           <li class="header__rubric-item">
             <a class="header__rubric-link" href="/">
-              Honda,
+              Honda(<span class="rubric__count-honda">12</span>),
             </a>
           </li>
           <li class="header__rubric-item">
             <a class="header__rubric-link" href="/">
-              Honda,
+              Mitsubishi(<span class="rubric__count-mitsubishi">51</span>),
             </a>
           </li>
-          <li class="header__rubric-item">
-            <a class="header__rubric-link" href="/">
-              Mitsubishi...
-            </a>
-          </li>
-
         </ul>
         <ul aria-hidden="true" class="header__rubric-list">
-
-
           <li class="header__rubric-item">
             <a class="header__rubric-link" href="/">
-              BMW,
+              BMW(<span class="rubric__count-bmw">48</span>),
             </a>
           </li>
           <li class="header__rubric-item">
             <a class="header__rubric-link" href="/">
-              Mercedes-Benz,
+              Mercedes-Benz(<span class="rubric__count-mercedez">32</span>),
             </a>
           </li>
           <li class="header__rubric-item">
             <a class="header__rubric-link" href="/">
-              Opel,
+              Opel(<span class="rubric__count-opel">14</span>),
             </a>
           </li>
           <li class="header__rubric-item">
             <a class="header__rubric-link" href="/">
-              Toyota,
+              Toyota(<span class="rubric__count-toyota">67</span>),
             </a>
           </li>
           <li class="header__rubric-item">
             <a class="header__rubric-link" href="/">
-              Lexus,
+              Lexus(<span class="rubric__count-lexus">45</span>),
             </a>
           </li>
           <li class="header__rubric-item">
             <a class="header__rubric-link" href="/">
-              Daewoo,
+              Daewoo(<span class="rubric__count-daewoo">32</span>),
             </a>
           </li>
           <li class="header__rubric-item">
             <a class="header__rubric-link" href="/">
-              Hyundai,
+              Hyundai(<span class="rubric__count-hyundai">75</span>),
             </a>
           </li>
           <li class="header__rubric-item">
             <a class="header__rubric-link" href="/">
-              ВАЗ,
+              ВАЗ(<span class="rubric__count-vaz">23</span>),
             </a>
           </li>
           <li class="header__rubric-item">
             <a class="header__rubric-link" href="/">
-              Chevrolet,
+              Chevrolet(<span class="rubric__count-chevrolet">12</span>),
             </a>
           </li>
           <li class="header__rubric-item">
             <a class="header__rubric-link" href="/">
-              Hafei,
+              Hafei(<span class="rubric__count-hafei">10</span>),
             </a>
           </li>
           <li class="header__rubric-item">
             <a class="header__rubric-link" href="/">
-              Porshe,
+              Porshe(<span class="rubric__count-porshe">87</span>),
             </a>
           </li>
           <li class="header__rubric-item">
             <a class="header__rubric-link" href="/">
-              Volkswagen,
+              Volkswagen(<span class="rubric__count-volkswagen">63</span>),
             </a>
           </li>
           <li class="header__rubric-item">
             <a class="header__rubric-link" href="/">
-              Nissan,
+              Nissan(<span class="rubric__count-nissan">52</span>),
             </a>
           </li>
           <li class="header__rubric-item">
             <a class="header__rubric-link" href="/">
-              Kia,
+              Kia(<span class="rubric__count-kia">63</span>),
             </a>
           </li>
           <li class="header__rubric-item">
             <a class="header__rubric-link" href="/">
-              Honda,
+              Hyundai(<span class="rubric__count-hyundai">75</span>),
             </a>
           </li>
           <li class="header__rubric-item">
             <a class="header__rubric-link" href="/">
-              Nissan,
+              ВАЗ(<span class="rubric__count-vaz">23</span>),
             </a>
           </li>
           <li class="header__rubric-item">
             <a class="header__rubric-link" href="/">
-              Kia,
+              Chevrolet(<span class="rubric__count-chevrolet">12</span>),
             </a>
           </li>
           <li class="header__rubric-item">
             <a class="header__rubric-link" href="/">
-              Honda,
+              Honda(<span class="rubric__count-honda">12</span>),
             </a>
           </li>
           <li class="header__rubric-item">
             <a class="header__rubric-link" href="/">
-              Honda,
-            </a>
-          </li>
-          <li class="header__rubric-item">
-            <a class="header__rubric-link" href="/">
-              Mitsubishi...
+              Mitsubishi(<span class="rubric__count-mitsubishi">51</span>),
             </a>
           </li>
         </ul>
@@ -444,10 +432,6 @@
             </div>
           </div>
         </div>
-<!--        <div class="buttons">-->
-<!--          <div class="swiper-button-next">Следующий</div>-->
-<!--          <div class="swiper-button-prev">Предыдущий</div>-->
-<!--        </div>-->
 
       </div>
       <div class="preview__images-mini">
@@ -550,7 +534,7 @@
             </div>
             <div class="section__main search">
               <div class=" search-info">
-                <h4 class=" search-title">Продажа автомобилей в Москве</h4>
+                <h4 class=" search-title">Продажа автомобилей в Казани</h4>
                 <div class=" counter search-counter">
                   <div class="count count-zero"></div>
                   <div class="count count-zero"></div>
@@ -561,7 +545,6 @@
                   <div class="count count-two"></div>
                   <div class="count count-two"></div>
                 </div>
-                <a class=" search-link" href="/">Посмотреть все</a>
               </div>
               <ul class=" search-list">
                 <li class=" search-item">
@@ -645,7 +628,7 @@
                   </a>
                 </li>
                 <li class=" search-item hidden-mobile">
-                  <a class="   search-mark" href="/">
+                  <a class=" search-mark" href="/">
                     <img
                       src="./images/brand/audi.png"
                       alt=""
@@ -1298,7 +1281,7 @@
 
             </div>
           </li>
-          <li class="section__item">
+          <li class="section__item ">
             <div class=" section__top section__top--yellow">
               <a
                 class="section__top-link "
@@ -1309,9 +1292,9 @@
             </span>
               </a>
             </div>
-            <div class="section__main recommend">
-              <ul class="recommend-list">
-                <li class="recommend-item">
+            <div class="section__main recommend swiper-vertical swiper ">
+              <ul class="recommend-list swiper-wrapper">
+                <li class="swiper-slide recommend-item">
                   <a class="recommend-link" href="/">
                     <img
                       class="recommend-img"
@@ -1325,7 +1308,7 @@
                     </div>
                   </a>
                 </li>
-                <li class="recommend-item">
+                <li class="swiper-slide recommend-item">
                   <a class="recommend-link" href="/">
                     <img
                       class="recommend-img"
@@ -1339,7 +1322,63 @@
                     </div>
                   </a>
                 </li>
-                <li class="recommend-item">
+                <li class="swiper-slide recommend-item">
+                  <a class="recommend-link" href="/">
+                    <img
+                      class="recommend-img"
+                      src="./images/auto/disky.png"
+                      alt=""
+                      width="107" height="84" loading="lazy"
+                    />
+                    <div class="recommend-info">
+                      <h4 class="recommend-title">диски Toyota</h4>
+                      <p class="recommend-cost">1.200 смн</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="swiper-slide recommend-item">
+                  <a class="recommend-link" href="/">
+                    <img
+                      class="recommend-img"
+                      src="./images/auto/disky.png"
+                      alt=""
+                      width="107" height="84" loading="lazy"
+                    />
+                    <div class="recommend-info">
+                      <h4 class="recommend-title">диски Toyota</h4>
+                      <p class="recommend-cost">1.200 смн</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="swiper-slide recommend-item">
+                  <a class="recommend-link" href="/">
+                    <img
+                      class="recommend-img"
+                      src="./images/auto/disky.png"
+                      alt=""
+                      width="107" height="84" loading="lazy"
+                    />
+                    <div class="recommend-info">
+                      <h4 class="recommend-title">диски Toyota</h4>
+                      <p class="recommend-cost">1.200 смн</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="swiper-slide recommend-item">
+                  <a class="recommend-link" href="/">
+                    <img
+                      class="recommend-img"
+                      src="./images/auto/disky.png"
+                      alt=""
+                      width="107" height="84" loading="lazy"
+                    />
+                    <div class="recommend-info">
+                      <h4 class="recommend-title">диски Toyota</h4>
+                      <p class="recommend-cost">1.200 смн</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="swiper-slide recommend-item">
                   <a class="recommend-link" href="/">
                     <img
                       class="recommend-img"
@@ -1432,9 +1471,9 @@
             </span>
               </a>
             </div>
-            <div class="section__main recommend">
-              <ul class="recommend-list">
-                <li class="recommend-item">
+            <div class="section__main recommend swiper-vertical2 swiper ">
+              <ul class="recommend-list swiper-wrapper">
+                <li class="swiper-slide recommend-item">
                   <a class="recommend-link" href="/">
                     <img
                       class="recommend-img"
@@ -1448,7 +1487,7 @@
                     </div>
                   </a>
                 </li>
-                <li class="recommend-item">
+                <li class="swiper-slide recommend-item">
                   <a class="recommend-link" href="/">
                     <img
                       class="recommend-img"
@@ -1462,7 +1501,63 @@
                     </div>
                   </a>
                 </li>
-                <li class="recommend-item">
+                <li class="swiper-slide recommend-item">
+                  <a class="recommend-link" href="/">
+                    <img
+                      class="recommend-img"
+                      src="./images/auto/disky.png"
+                      alt=""
+                      width="107" height="84" loading="lazy"
+                    />
+                    <div class="recommend-info">
+                      <h4 class="recommend-title">диски Toyota</h4>
+                      <p class="recommend-cost">1.200 смн</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="swiper-slide recommend-item">
+                  <a class="recommend-link" href="/">
+                    <img
+                      class="recommend-img"
+                      src="./images/auto/disky.png"
+                      alt=""
+                      width="107" height="84" loading="lazy"
+                    />
+                    <div class="recommend-info">
+                      <h4 class="recommend-title">диски Toyota</h4>
+                      <p class="recommend-cost">1.200 смн</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="swiper-slide recommend-item">
+                  <a class="recommend-link" href="/">
+                    <img
+                      class="recommend-img"
+                      src="./images/auto/disky.png"
+                      alt=""
+                      width="107" height="84" loading="lazy"
+                    />
+                    <div class="recommend-info">
+                      <h4 class="recommend-title">диски Toyota</h4>
+                      <p class="recommend-cost">1.200 смн</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="swiper-slide recommend-item">
+                  <a class="recommend-link" href="/">
+                    <img
+                      class="recommend-img"
+                      src="./images/auto/disky.png"
+                      alt=""
+                      width="107" height="84" loading="lazy"
+                    />
+                    <div class="recommend-info">
+                      <h4 class="recommend-title">диски Toyota</h4>
+                      <p class="recommend-cost">1.200 смн</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="swiper-slide recommend-item">
                   <a class="recommend-link" href="/">
                     <img
                       class="recommend-img"
@@ -1488,7 +1583,7 @@
     <div class="section__body">
       <div class="section__body-inner ">
         <ul class="section__list section__list-big">
-          <li class="section__item">
+          <li class="section__item section__item-news">
             <div class="section__top">
               <a
                 class=" section__top-link"
@@ -1498,28 +1593,29 @@
                   Главные новости и статьи
                 </div>
               </a>
-              <ul class="section__top-nav hidden-mobile">
-                <li>
-                  <a class="section__top-nav-link" href="/" title="">ВСЕ</a>
-                </li>
-                <li class="section__top-between">//</li>
-                <li>
-                  <a class="section__top-nav-link" href="/" title="">ТАДЖИКИСТАН</a>
-                </li>
-                <li class="section__top-between">//</li>
-                <li>
-                  <a class="section__top-nav-link" href="/" title="">В МИРЕ</a>
-                </li>
-                <li class="section__top-between">//</li>
-                <li>
-                  <a class="section__top-nav-link" href="/" title="">НОВОСТИ САЙТА</a>
-                </li>
-                <li class="section__top-between">//</li>
-                <li>
-                  <a class="section__top-nav-link" href="/" title="">РЕКЛАМА</a>
-                </li>
-              </ul>
+
             </div>
+            <ul class="section__top-nav hidden-mobile">
+              <li>
+                <a class="section__top-nav-link" href="/" title="">ВСЕ</a>
+              </li>
+              <li class="section__top-between">//</li>
+              <li>
+                <a class="section__top-nav-link" href="/" title=""> В МИРЕ</a>
+              </li>
+              <li class="section__top-between">//</li>
+              <li>
+                <a class="section__top-nav-link" href="/" title="">РОССИЯ</a>
+              </li>
+              <li class="section__top-between">///</li>
+              <li>
+                <a class="section__top-nav-link" href="/" title="">ТАТАРСТАН</a>
+              </li>
+              <li class="section__top-between">///</li>
+              <li>
+                <a class="section__top-nav-link" href="/" title="">РЕКЛАМА</a>
+              </li>
+            </ul>
             <div class="news section__main">
               <ul class="news-list">
                 <li class="news-item">

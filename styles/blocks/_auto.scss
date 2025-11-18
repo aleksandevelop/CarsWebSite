@@ -5,11 +5,9 @@
     display: grid;
     gap: 10px;
     grid-template-columns: repeat(3, 1fr);
-
-    @include mobile {
-      grid-template-columns: repeat(2, 1fr);
+    @include mobile{
+      grid-template-columns: repeat(2,1fr);
     }
-
   }
 
   &-link {
@@ -24,15 +22,14 @@
 
   &-title {
     color: inherit;
-    font-size: 25px;
+    font-size: 18px;
   }
 
   &-info {
     display: flex;
-    align-items: center;
+    align-items: end;
     justify-content: space-between;
-    font-size: 14px;
-
+    font-size: 12px;
   }
 
   &-cost {
@@ -48,8 +45,9 @@
 
   &-img {
     width: 100%;
-    @include mobile-s {
-      max-width: 150px;
+
+    @include mobile {
+//      max-width: 150px;
     }
   }
 }

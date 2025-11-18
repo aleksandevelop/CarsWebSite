@@ -1,4 +1,3 @@
-
 @use '../helpers' as *;
 .search{
 
@@ -36,9 +35,15 @@
     flex-wrap: wrap;
     gap: 10px;
     justify-content: space-between;
+    @include tablet{
+      justify-content: normal;
+
+    }
     @include mobile {
       gap: 3px;
       padding-top: 10px;
+      justify-content: space-between;
+
     }
   }
 

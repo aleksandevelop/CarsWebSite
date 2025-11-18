@@ -12,6 +12,10 @@
     padding: 20px;
     border-inline: var(--border);
 
+
+    @include mobile{
+      border-inline: none;
+    }
   }
 
   &-inner {

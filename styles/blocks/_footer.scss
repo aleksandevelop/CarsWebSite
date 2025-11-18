@@ -1,6 +1,12 @@
+@use '../helpers' as *;
+
 .footer{
   width: 100%;
+  padding-top: 16px;
 
+  @include mobile{
+    padding: 0;
+  }
   &__top{
     min-height: 20px;
     background-color: var(--color-accent);

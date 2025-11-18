@@ -22,7 +22,8 @@
 
     }
   }
-  &__logo{
+
+  &__logo {
     max-width: 240px;
     width: 100%;
   }
@@ -48,7 +49,8 @@
   &__actions {
     display: flex;
     flex-direction: column;
-    row-gap: 10px;
+    row-gap: 5px;
+    margin-top: -15px; //заказчик попросил, криво в коде - красиво на сайте))
 
     &--link {
       text-decoration: none;
@@ -67,6 +69,7 @@
     &--item {
       transition-duration: var(--transition-duration);
       width: 25px;
+
       &:hover {
         transform: scale(1.1);
       }
@@ -100,14 +103,10 @@
     }
 
     &-item {
-      padding: 15px;
-
-      &:not(:last-child) {
-        border-right: 1px solid var(--color-gray);
-      }
-
+      padding-block: 15px;
       @include mobile {
         padding: 8px;
+        border-right: var(--border  );
       }
 
     }
@@ -120,9 +119,12 @@
       font-size: 12px;
       font-weight: bold;
       background-color: transparent;
+      padding-inline: 15px;
+      border-right: var(--border);
 
-      &:not(:last-child) {
-        border-right: var(--border);
+      @include mobile{
+        padding-inline: 0;
+        border-right: none; // убрал для того что бы сделать на всю высоту полоску
       }
 
       &:hover {
@@ -133,6 +135,10 @@
         color: var(--color-gray);
         pointer-events: none;
       }
+      &.last{
+        border: none;
+      } //убрал бордер для последнего элемента
+
     }
 
   }
@@ -140,16 +146,15 @@
   &__rubric {
     display: flex;
     flex: 0 0 100%;
-    background: linear-gradient(
-        to bottom,
-        rgba(255, 255, 255, 0.9) 0%,
-        rgba(255, 255, 255, 0.1) 100%
-    ),
-    var(--color-gray);
+    background-color: #f5f5f5;
     padding: 8px;
     color: #5b5b5b;
     overflow-x: hidden;
     font-size: 12px;
+
+    &:hover &-list{
+      animation-play-state: paused;
+    }
 
     &-list {
       display: flex;
@@ -166,6 +171,8 @@
           transform: translateX(-100%);
         }
       }
+
+
     }
 
 
